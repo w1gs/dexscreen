@@ -1,0 +1,46 @@
+{
+    "networks": [],
+    "dexes": [],
+    "pools": [
+        {
+            "type": "pool",
+            "address": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
+            "api_address": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
+            "price_in_usd": "0.00001724336523",
+            "reserve_in_usd": "18926.46670545664919436888963094571",
+            "from_volume_in_usd": "15.7925826173",
+            "to_volume_in_usd": "15.7925826173",
+            "price_percent_change": "-1.3%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Raydium",
+                "identifier": "raydium",
+                "image_url": "https://assets.geckoterminal.com/d59mdozlyr4z1w61oyqdm0xrrd2v"
+            },
+            "tokens": [
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                },
+                {
+                    "name": "San Andreas",
+                    "symbol": "PIMP",
+                    "address": "9vcqCACTyRaP3Ay1LxuDZ4szfguZUaz7wavLQRSHcGX5",
+                    "image_url": "https://assets.geckoterminal.com/gx6oebs44sna904lpbpp84z7jc0e",
+                    "is_base_token": true
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-04-03T13:03:16Z"
+        }
+    ],
+    "pairs": [],
+    "tags": []
+}

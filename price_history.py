@@ -29,21 +29,109 @@ class PriceData:
     def format_price(self, price):
         return format(Decimal(str(price)), "f") if isinstance(price, float) else price
 
+    def search_all_platforms(self, query: str):
+        all_info = {
+            "searched_address": query,
+            "dextools_data": False,
+            "dexscreen_data": False,
+            "pump_data": False,
+            "geckoterminal_data": False,
+        }
+
+        dextools_info = self.search_dextools(query.lower().strip())
+        dexscreen_info = self.search_dexscreen(query)
+        geckoterminal_info = self.search_geckoterminal(query)
+        
+        if query.endswith("pump"):
+            pump_info = self.search_pump(query)
+        else:
+            pump_info = self.search_pump(f"{query}")
+            if pump_info is None:
+                pump_info = self.search_pump(f"{query}pump")
+        if len(dextools_info.get("results", [])) == 0:
+            dextools_results = None
+        else:
+            dextools_results = dextools_info.get("results")
+            all_info["dextools_data"] = True
+            all_info["chain_id"] = dextools_results[0]["id"]["chain"]
+            all_info["symbol"] = dextools_results[0]["symbol"]
+            all_info["name"] = dextools_results[0]["name"]
+            if len(dextools_results) == 1:
+                all_info["pair_address"] = dextools_results[0]["id"]["pair"]
+            else:
+                for res in dextools_results:
+                    if res.get("redirectToPool", None) is not None:
+                        all_info["pair_address"] = res["redirectToPool"]
+
+        if dexscreen_info is not None:
+            all_info["dexscreen_data"] = True
+            if all_info.get("pair_address", None) is None:
+                all_info["pair_address"] = dexscreen_info["pair_address"]
+
+        if pump_info is not None:
+            all_info["pump_data"] = True
+            if all_info.get("symbol", None) is None:
+                all_info["symbol"] = pump_info["symbol"]
+                all_info["name"] = pump_info["name"]
+                all_info["chain_id"] = "solana"
+        
+        if geckoterminal_info is not None:
+            all_info['geckoterminal_data'] = True
+
+        filenames = {
+            "dextools.json": dextools_results,
+            "dexscreen.json": dexscreen_info,
+            "pump.json": pump_info,
+            "geckoterminal.json": geckoterminal_info
+        }
+        for name, result in filenames.items():
+            with open(name, "w") as f:
+                f.write(json.dumps(result, indent=4))
+
+        return all_info
+
+    def search_geckoterminal(self, query: str):
+        geckoterminal_url = (
+            f"https://app.geckoterminal.com/api/p1/search?query={query.strip()}"
+        )
+        data = self.fetch_data(geckoterminal_url, bypass_cloudflare=True)
+        for _, v in data.get("data",{}).get("attributes", {}).items():
+            if len(v) >= 1:
+                return data.get("data", {}).get("attributes", None)
+        return None
+
     def search_dexscreen(self, contract_address: str) -> dict:
         search_url = (
             f"https://api.dexscreener.com/latest/dex/search?q={contract_address}"
         )
         data = self.fetch_data(search_url)
+
         if not data or "pairs" not in data or not data["pairs"]:
             return None
         pair_data = data["pairs"][0]
-        print(f"Blockchain found: {pair_data.get('chainId').title()}")
         return {
             "contract_address": contract_address,
             "chain_id": pair_data.get("chainId"),
             "pair_address": pair_data.get("pairAddress"),
             "symbol_pair": f"{pair_data['baseToken'].get('symbol')}/{pair_data['quoteToken'].get('symbol')}",
         }
+
+    def search_dextools(self, query: str):
+        headers = {
+            "Accept": "application/json",
+            "Referer": "https://www.dextools.io/app/en/solana/pair-explorer/",
+            "User-Agent": self.ua.chrome,
+        }
+        dextools_search_url = (
+            f"https://www.dextools.io/shared/search/pair?query={query}"
+        )
+        return self.fetch_data(dextools_search_url, headers=headers)
+
+    def search_pump(self, query: str):
+        data = self.fetch_data(f"https://frontend-api.pump.fun/coins/{query}")
+        if data.get("statusCode", 200) == 500:
+            return None
+        return data
 
     def pump_price_data(self, pump_address: str):
         pump_info = self.fetch_data(
@@ -100,15 +188,27 @@ class PriceData:
             print("Market Cap over $69,000. Checking DexTools for price data.")
             self.dextools_price_data(pair_address)
 
-        # Group candles by date and get the latest candle for each date
-        latest_candles_by_date = {}
+        # Group candles by date and get the latest timestamp for each date
+        latest_timestamps_by_date = {}
         for candle in pump_price_data:
             date_str = datetime.fromtimestamp(candle["timestamp"]).strftime("%Y-%m-%d")
             if (
-                date_str not in latest_candles_by_date
-                or candle["timestamp"] > latest_candles_by_date[date_str]["timestamp"]
+                date_str not in latest_timestamps_by_date
+                or candle["timestamp"] > latest_timestamps_by_date[date_str]
             ):
-                latest_candles_by_date[date_str] = candle
+                latest_timestamps_by_date[date_str] = candle["timestamp"]
+
+        # Filter the candles to only include those with the latest timestamp for each date
+        latest_candles_by_date = {
+            date_str: next(
+                candle
+                for candle in pump_price_data
+                if datetime.fromtimestamp(candle["timestamp"]).strftime("%Y-%m-%d")
+                == date_str
+                and candle["timestamp"] == latest_timestamps_by_date[date_str]
+            )
+            for date_str in latest_timestamps_by_date
+        }
 
         self.price_data.setdefault(pair_address, {}).setdefault("price_data", {})[
             "pump"
@@ -151,20 +251,15 @@ class PriceData:
         ]
 
     def fetch_price_data(self, contract_address: str):
-        dex_data = self.search_dexscreen(contract_address)
-        if dex_data and (dex_data.get("symbol_pair", None) is not None):
-            self.price_data.setdefault(dex_data["pair_address"], {})[
-                "dextools_pair_symbol"
-            ] = dex_data["symbol_pair"]
-
+        all_info = self.search_all_platforms(contract_address)
+        self.price_data["contract_address"] = all_info["searched_address"]
+        print(all_info)
         if not contract_address.endswith("pump"):
-            if dex_data is None:
+            if all_info.get("pair_address", None) is None:
                 self.pump_price_data(contract_address)
                 self.write_results()
                 return
-            self.dextools_price_data(
-                dex_data["pair_address"], dex_data["symbol_pair"], dex_data["chain_id"]
-            )
+            self.dextools_price_data(all_info["pair_address"], all_info["chain_id"])
         else:
             print("Address ends with 'pump'. Checking price data from pump.fun")
 

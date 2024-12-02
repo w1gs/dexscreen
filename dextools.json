@@ -1,0 +1,322 @@
+[
+    {
+        "score": {
+            "total": 1,
+            "raw": 303.4876708984375,
+            "chain": 1,
+            "pair": 0.75,
+            "liquidity": 0.06994679852519914,
+            "dextScore": 0.64,
+            "socialsScore": 0
+        },
+        "id": {
+            "chain": "solana",
+            "exchange": "dexut1mp8",
+            "pair": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
+            "token": "9vcqCACTyRaP3Ay1LxuDZ4szfguZUaz7wavLQRSHcGX5",
+            "tokenRef": "So11111111111111111111111111111111111111112"
+        },
+        "creationBlock": 258126817,
+        "creationTime": "2024-04-03T12:59:20.000Z",
+        "dextScore": {
+            "information": 1,
+            "holders": 99,
+            "pool": 10,
+            "transactions": 99,
+            "creation": 99,
+            "total": 64
+        },
+        "locks": [],
+        "metrics": {
+            "initialLiquidity": 41975.44799463034,
+            "initialLiquidityUpdatedAt": "2024-04-03T12:59:20.000Z",
+            "initialReserve": 168800000,
+            "initialReserveRef": 111.733711623,
+            "liquidity": 18801.82725415154,
+            "liquidityUpdatedAt": "2024-12-01T18:46:12.866Z",
+            "reserve": 551814583.1247718,
+            "reserveRef": 39.23096135300004,
+            "txCount": 202468
+        },
+        "name": "San Andreas",
+        "nameRef": "Wrapped SOL",
+        "symbol": "PIMP",
+        "symbolRef": "SOL",
+        "type": "standard-pair",
+        "pool": {
+            "tokenAccount0": "HM3sH3cxjvvjKjnhUqVyGvr2bBNnm6YzXomzM3amhfZG",
+            "tokenAccount1": "3CLK4fqTQsUvqUXs9GedVd4dMDUTwt6Zv9XqkPBNHbBU"
+        },
+        "periodStats": {
+            "1h": {
+                "volume": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "swaps": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "price": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    },
+                    "chain": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "liquidity": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "volatility": 0.000458152451801578,
+                "makers": 0,
+                "updatedAt": "2024-12-01T19:49:27.748Z"
+            },
+            "5m": {
+                "volume": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "swaps": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "price": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    },
+                    "chain": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "liquidity": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "volatility": 0.006909477501574153,
+                "makers": 0,
+                "updatedAt": "2024-11-26T04:56:45.178Z"
+            },
+            "6h": {
+                "volume": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "swaps": {
+                    "total": 0,
+                    "buys": 0,
+                    "sells": 0
+                },
+                "price": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    },
+                    "chain": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "liquidity": {
+                    "usd": {
+                        "first": 0,
+                        "last": 0,
+                        "min": 0,
+                        "max": 0,
+                        "diff": 0
+                    }
+                },
+                "volatility": 0.000458152451801578,
+                "makers": 0,
+                "updatedAt": "2024-12-02T04:54:45.912Z"
+            },
+            "24h": {
+                "volume": {
+                    "total": 15.773145068870843,
+                    "buys": 7.159041814031585,
+                    "sells": 8.614103254839259
+                },
+                "swaps": {
+                    "total": 2,
+                    "buys": 1,
+                    "sells": 1
+                },
+                "price": {
+                    "usd": {
+                        "first": 1.7441922335518153e-05,
+                        "last": 1.7228206509678517e-05,
+                        "min": 1.7228206509678517e-05,
+                        "max": 1.7441922335518153e-05,
+                        "diff": -1.225299721719505
+                    },
+                    "chain": {
+                        "first": 7.309046149723132e-08,
+                        "last": 7.2713862e-08,
+                        "min": 7.2713862e-08,
+                        "max": 7.309046149723132e-08,
+                        "diff": -0.5152512236437126
+                    }
+                },
+                "liquidity": {
+                    "usd": {
+                        "first": 18986.53192530228,
+                        "last": 18801.82725415154,
+                        "min": 18801.82725415154,
+                        "max": 18986.53192530228,
+                        "diff": -0.9728194273573135
+                    }
+                },
+                "volatility": 0.0008389155402642077,
+                "makers": 2,
+                "updatedAt": "2024-12-01T18:47:20.671Z"
+            }
+        },
+        "firstSwapTimestamp": "2024-04-08T11:27:36.000Z",
+        "price": 1.7228206509678517e-05,
+        "priceTime": "2024-12-01T18:46:10.000Z",
+        "token": {
+            "metrics": {
+                "holdersUpdatedAt": "2024-12-01T18:50:12.982Z",
+                "txCount": 0,
+                "maxSupply": 998734225.247607,
+                "totalSupply": 998734225.247607,
+                "holders": 398,
+                "circulatingSupply": null,
+                "totalSupplyUpdatedAt": null,
+                "fdv": 17206.39948084955
+            },
+            "audit": {
+                "is_contract_renounced": false,
+                "dextools": {
+                    "is_open_source": "yes",
+                    "is_honeypot": "no",
+                    "is_mintable": "no",
+                    "is_proxy": "unknown",
+                    "slippage_modifiable": "no",
+                    "is_blacklisted": "unknown",
+                    "sell_tax": {
+                        "min": null,
+                        "max": null,
+                        "status": "unknown"
+                    },
+                    "buy_tax": {
+                        "min": null,
+                        "max": null,
+                        "status": "unknown"
+                    },
+                    "is_contract_renounced": "yes",
+                    "is_potentially_scam": "no",
+                    "transfer_pausable": "unknown",
+                    "summary": {
+                        "providers": {
+                            "critical": [],
+                            "warning": [],
+                            "regular": [
+                                "owner_address",
+                                "creator_address",
+                                "is_potentially_scam"
+                            ]
+                        },
+                        "review": {
+                            "critical": [],
+                            "warning": [],
+                            "regular": [
+                                "is_proxy",
+                                "is_blacklisted",
+                                "transfer_pausable"
+                            ]
+                        }
+                    },
+                    "updatedAt": "2024-05-06T16:37:00.969Z"
+                },
+                "url": ""
+            },
+            "decimals": 6,
+            "info": {
+                "cmc": "",
+                "coingecko": "",
+                "description": "",
+                "dextools": false,
+                "email": "",
+                "extraInfo": "",
+                "nftCollection": "",
+                "ventures": false,
+                "blueCheckmark": null,
+                "dextoolsUpdatedAt": null
+            },
+            "links": {
+                "bitbucket": "",
+                "discord": "",
+                "facebook": "",
+                "github": "",
+                "instagram": "",
+                "linkedin": "",
+                "medium": "",
+                "reddit": "",
+                "telegram": "",
+                "tiktok": "",
+                "twitter": "",
+                "website": "",
+                "youtube": "",
+                "slack": ""
+            },
+            "logo": "",
+            "name": "San Andreas",
+            "symbol": "PIMP",
+            "totalSupply": "998734225247607",
+            "reprPair": {
+                "id": {
+                    "chain": "solana",
+                    "exchange": "dexut1mp8",
+                    "pair": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
+                    "token": "9vcqCACTyRaP3Ay1LxuDZ4szfguZUaz7wavLQRSHcGX5",
+                    "tokenRef": "So11111111111111111111111111111111111111112"
+                },
+                "updatedAt": "2024-11-29T04:55:56.253Z"
+            },
+            "banner": "",
+            "categories": []
+        },
+        "price24h": 1.7441922335518153e-05,
+        "volume": 15.773145068870843,
+        "swaps": 2
+    }
+]
