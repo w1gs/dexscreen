@@ -54,6 +54,7 @@ class PriceData:
             dextools_results = dextools_info.get("results")
             all_info["dextools_data"] = True
             all_info["chain_id"] = dextools_results[0]["id"]["chain"]
+            all_info["token_address"] = dextools_results[0]["id"]["token"]
             all_info["symbol"] = dextools_results[0]["symbol"]
             all_info["name"] = dextools_results[0]["name"]
             if len(dextools_results) == 1:
@@ -77,6 +78,18 @@ class PriceData:
         
         if geckoterminal_info is not None:
             all_info['geckoterminal_data'] = True
+            token_info = geckoterminal_info.get("pools", [])[0].get("tokens")
+            for token in token_info:
+                if token.get("symbol") == all_info['symbol']:
+                    all_info['contract_address'] = token.get("address")
+
+        if all_info.get("contract_address", None) and str(all_info.get("contract_address")).endswith("pump"):
+            all_info["pump_data"] = True
+            pump_info = self.search_pump(all_info['contract_address']) 
+            if all_info.get("symbol", None) is None:
+                all_info["symbol"] = pump_info["symbol"]
+                all_info["name"] = pump_info["name"]
+                all_info["chain_id"] = "solana"
 
         filenames = {
             "dextools.json": dextools_results,

@@ -4,13 +4,13 @@
     "pools": [
         {
             "type": "pool",
-            "address": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
-            "api_address": "DPtzKBE6kNbVdS9CJ5R45YRAVQLuryE867YP47mXNWBt",
-            "price_in_usd": "0.00001724336523",
-            "reserve_in_usd": "18926.46670545664919436888963094571",
-            "from_volume_in_usd": "15.7925826173",
-            "to_volume_in_usd": "15.7925826173",
-            "price_percent_change": "-1.3%",
+            "address": "93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu",
+            "api_address": "93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu",
+            "price_in_usd": "0.3780968751",
+            "reserve_in_usd": "9109566.2483008705067012073291312",
+            "from_volume_in_usd": "21559911.5781358",
+            "to_volume_in_usd": "21559911.5781358",
+            "price_percent_change": "-11.51%",
             "network": {
                 "name": "Solana",
                 "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
@@ -30,15 +30,357 @@
                     "is_base_token": false
                 },
                 {
-                    "name": "San Andreas",
-                    "symbol": "PIMP",
-                    "address": "9vcqCACTyRaP3Ay1LxuDZ4szfguZUaz7wavLQRSHcGX5",
-                    "image_url": "https://assets.geckoterminal.com/gx6oebs44sna904lpbpp84z7jc0e",
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
                     "is_base_token": true
                 }
             ],
             "volume_percent_change_24h": null,
-            "pool_creation_date": "2024-04-03T13:03:16Z"
+            "pool_creation_date": "2024-11-15T20:08:23Z"
+        },
+        {
+            "type": "pool",
+            "address": "DhJNSHwyQ577dKevaXBq6EAJrVcBvV7TbY1G9QNh7bJg",
+            "api_address": "DhJNSHwyQ577dKevaXBq6EAJrVcBvV7TbY1G9QNh7bJg",
+            "price_in_usd": "0.3751833215",
+            "reserve_in_usd": "1138222.4185422229968844549418852",
+            "from_volume_in_usd": "6968542.02273298",
+            "to_volume_in_usd": "6968542.02273298",
+            "price_percent_change": "-12.3%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Meteora",
+                "identifier": "meteora",
+                "image_url": "https://assets.geckoterminal.com/qzu6romjftaxlcjl3mqrfq2muihz"
+            },
+            "tokens": [
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                },
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-20T01:01:23Z"
+        },
+        {
+            "type": "pool",
+            "address": "4Eq688gAJRJiRzhFR4tKpVyRhknDvC8UkqsLmfsEzFFX",
+            "api_address": "4Eq688gAJRJiRzhFR4tKpVyRhknDvC8UkqsLmfsEzFFX",
+            "price_in_usd": "0.3781430392",
+            "reserve_in_usd": "905137.576308510131194195241424",
+            "from_volume_in_usd": "6274491.54398979",
+            "to_volume_in_usd": "6274491.54398979",
+            "price_percent_change": "-11.96%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Orca",
+                "identifier": "orca",
+                "image_url": "https://assets.geckoterminal.com/c4pqdp0wi78rm2vdcz1gjacnd7pl"
+            },
+            "tokens": [
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                },
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-20T00:26:22Z"
+        },
+        {
+            "type": "pool",
+            "address": "BUf6epoEfJvctdXtNhBsBFnSaWeSYNnfVaCYVQcPFQHn",
+            "api_address": "BUf6epoEfJvctdXtNhBsBFnSaWeSYNnfVaCYVQcPFQHn",
+            "price_in_usd": "0.3780484149",
+            "reserve_in_usd": "398932.2418253738186081446753312",
+            "from_volume_in_usd": "5441442.15548402",
+            "to_volume_in_usd": "5441442.15548402",
+            "price_percent_change": "-11.91%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Meteora",
+                "identifier": "meteora",
+                "image_url": "https://assets.geckoterminal.com/qzu6romjftaxlcjl3mqrfq2muihz"
+            },
+            "tokens": [
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                },
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-20T09:50:01Z"
+        },
+        {
+            "type": "pool",
+            "address": "71m12A5zLEowFRkwunLvd1MgUUPRBbMCxQPafxkg9idF",
+            "api_address": "71m12A5zLEowFRkwunLvd1MgUUPRBbMCxQPafxkg9idF",
+            "price_in_usd": "0.3720704003",
+            "reserve_in_usd": "1427344.959589856820202391012134",
+            "from_volume_in_usd": "1506928.14210202",
+            "to_volume_in_usd": "1506928.14210202",
+            "price_percent_change": "-13.18%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Raydium (CLMM)",
+                "identifier": "raydium-clmm",
+                "image_url": "https://assets.geckoterminal.com/rf1rmxhbfnz6yqpk6jo6nkidx4qz"
+            },
+            "tokens": [
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                },
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-19T01:35:35Z"
+        },
+        {
+            "type": "pool",
+            "address": "8SvCMh3dfJtMeqJD6nRxMxS1PU8b1a4E1Ysp92xpMSiC",
+            "api_address": "8SvCMh3dfJtMeqJD6nRxMxS1PU8b1a4E1Ysp92xpMSiC",
+            "price_in_usd": "0.3784216822",
+            "reserve_in_usd": "994792.10084857205158239877666",
+            "from_volume_in_usd": "1624130.06249396",
+            "to_volume_in_usd": "1624130.06249396",
+            "price_percent_change": "-12.44%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Meteora",
+                "identifier": "meteora",
+                "image_url": "https://assets.geckoterminal.com/qzu6romjftaxlcjl3mqrfq2muihz"
+            },
+            "tokens": [
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                },
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-19T23:42:01Z"
+        },
+        {
+            "type": "pool",
+            "address": "6xKSjvGvT39WhFoTvGFnbc3PCwUrycMLDqWWECvRZpsJ",
+            "api_address": "6xKSjvGvT39WhFoTvGFnbc3PCwUrycMLDqWWECvRZpsJ",
+            "price_in_usd": "0.3752593981",
+            "reserve_in_usd": "315404.9736924440926440733782349",
+            "from_volume_in_usd": "1939987.84818935",
+            "to_volume_in_usd": "1939987.84818935",
+            "price_percent_change": "-12.56%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Meteora",
+                "identifier": "meteora",
+                "image_url": "https://assets.geckoterminal.com/qzu6romjftaxlcjl3mqrfq2muihz"
+            },
+            "tokens": [
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                },
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-21T00:16:04Z"
+        },
+        {
+            "type": "pool",
+            "address": "HVuDfdBT7bGnqafApxXXaEXPhJeugVU4v8ZdMkDQDXYR",
+            "api_address": "HVuDfdBT7bGnqafApxXXaEXPhJeugVU4v8ZdMkDQDXYR",
+            "price_in_usd": "0.3773188528",
+            "reserve_in_usd": "434293.360136800547362847250266",
+            "from_volume_in_usd": "181560.845789262",
+            "to_volume_in_usd": "181560.845789262",
+            "price_percent_change": "-10.5%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Orca",
+                "identifier": "orca",
+                "image_url": "https://assets.geckoterminal.com/c4pqdp0wi78rm2vdcz1gjacnd7pl"
+            },
+            "tokens": [
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                },
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-19T14:58:56Z"
+        },
+        {
+            "type": "pool",
+            "address": "3sJEpHDLTqCLLjwWHVQYoDiLjNHqmoLWPQaVADD592GP",
+            "api_address": "3sJEpHDLTqCLLjwWHVQYoDiLjNHqmoLWPQaVADD592GP",
+            "price_in_usd": "0.3745351364",
+            "reserve_in_usd": "126913.8776917113258136143114376",
+            "from_volume_in_usd": "237463.35925699",
+            "to_volume_in_usd": "237463.35925699",
+            "price_percent_change": "-12.69%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Meteora",
+                "identifier": "meteora",
+                "image_url": "https://assets.geckoterminal.com/qzu6romjftaxlcjl3mqrfq2muihz"
+            },
+            "tokens": [
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                },
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-21T14:18:02Z"
+        },
+        {
+            "type": "pool",
+            "address": "5DR37kNg4nTyBrsj9avVdbMnWG2yFseYHr5W2LVLoFy8",
+            "api_address": "5DR37kNg4nTyBrsj9avVdbMnWG2yFseYHr5W2LVLoFy8",
+            "price_in_usd": "0.3770635628",
+            "reserve_in_usd": "12204.9856414339537938243033788",
+            "from_volume_in_usd": "276596.058960165",
+            "to_volume_in_usd": "276596.058960165",
+            "price_percent_change": "-12.14%",
+            "network": {
+                "name": "Solana",
+                "image_url": "https://assets.geckoterminal.com/ttmzp815hr8hanm6bwxp549dq9rp",
+                "identifier": "solana"
+            },
+            "dex": {
+                "name": "Orca",
+                "identifier": "orca",
+                "image_url": "https://assets.geckoterminal.com/c4pqdp0wi78rm2vdcz1gjacnd7pl"
+            },
+            "tokens": [
+                {
+                    "name": "Wrapped SOL",
+                    "symbol": "SOL",
+                    "address": "So11111111111111111111111111111111111111112",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+                    "is_base_token": false
+                },
+                {
+                    "name": "Just a chill guy",
+                    "symbol": "CHILLGUY",
+                    "address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+                    "image_url": "https://coin-images.coingecko.com/coins/images/51746/large/Scherm%C2%ADafbeelding_2024-11-15_om_20.57.58.png?1731926037",
+                    "is_base_token": true
+                }
+            ],
+            "volume_percent_change_24h": null,
+            "pool_creation_date": "2024-11-26T12:37:23Z"
         }
     ],
     "pairs": [],
