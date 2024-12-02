@@ -32,6 +32,7 @@ class PriceData:
     def search_all_platforms(self, query: str):
         all_info = {
             "searched_address": query,
+            "platform_data": [],
             "dextools_data": False,
             "dexscreen_data": False,
             "pump_data": False,
@@ -41,13 +42,18 @@ class PriceData:
         dextools_info = self.search_dextools(query.lower().strip())
         dexscreen_info = self.search_dexscreen(query)
         geckoterminal_info = self.search_geckoterminal(query)
+       
         
         if query.endswith("pump"):
             pump_info = self.search_pump(query)
+            if pump_info is not None:
+                all_info["pump_data"] = True
         else:
             pump_info = self.search_pump(f"{query}")
             if pump_info is None:
                 pump_info = self.search_pump(f"{query}pump")
+        all_info['platform_data'].append(pump_info)
+
         if len(dextools_info.get("results", [])) == 0:
             dextools_results = None
         else:
@@ -102,6 +108,17 @@ class PriceData:
                 f.write(json.dumps(result, indent=4))
 
         return all_info
+
+    def aggregate_price_data(self, all_info):
+        info = []
+        for data in all_info['platform_data']:
+            if data is not None:
+                info.append(data)
+
+        print(json.dumps(info, indent=4))
+
+
+        pass
 
     def search_geckoterminal(self, query: str):
         geckoterminal_url = (
@@ -265,19 +282,19 @@ class PriceData:
 
     def fetch_price_data(self, contract_address: str):
         all_info = self.search_all_platforms(contract_address)
-        self.price_data["contract_address"] = all_info["searched_address"]
-        print(all_info)
-        if not contract_address.endswith("pump"):
-            if all_info.get("pair_address", None) is None:
-                self.pump_price_data(contract_address)
-                self.write_results()
-                return
-            self.dextools_price_data(all_info["pair_address"], all_info["chain_id"])
-        else:
-            print("Address ends with 'pump'. Checking price data from pump.fun")
+        self.aggregate_price_data(all_info)
 
-            self.pump_price_data(contract_address)
-            self.write_results()
+        # if not contract_address.endswith("pump"):
+        #     if all_info.get("pair_address", None) is None:
+        #         self.pump_price_data(contract_address)
+        #         self.write_results()
+        #         return
+        #     self.dextools_price_data(all_info["pair_address"], all_info["chain_id"])
+        # else:
+        #     print("Address ends with 'pump'. Checking price data from pump.fun")
+
+        #     self.pump_price_data(contract_address)
+        self.write_results()
 
     def write_results(self):
         with open("PriceData.json", "w") as f:
