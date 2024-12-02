@@ -169,6 +169,7 @@ class PriceData:
             print("Address ends with 'pump'. Checking price data from pump.fun")
 
             self.pump_price_data(contract_address)
+            self.write_results()
 
     def write_results(self):
         with open("PriceData.json", "w") as f:
